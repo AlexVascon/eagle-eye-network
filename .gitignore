@@ -1,0 +1,12 @@
+# Root .gitignore
+
+# Ignore all node_modules in all subdirectories
+**/node_modules
+
+# Ignore all .env files in all subdirectories
+**/.env
+
+# Other common ignores
+*.log
+.DS_Store
+dist
