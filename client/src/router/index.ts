@@ -14,4 +14,16 @@ const router = createRouter({
   routes
 })
 
+router.beforeEach((to, from, next) => {
+  const isAuthenticated = !!localStorage.getItem('authToken')
+
+  // If route is login or user is authenticated, allow access
+  if (to.path === '/' || isAuthenticated) {
+    next()
+  } else {
+    // Redirect to login page
+    next('/')
+  }
+})
+
 export default router
