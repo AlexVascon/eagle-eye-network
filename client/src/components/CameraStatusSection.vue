@@ -1,20 +1,18 @@
 <template>
-  <v-expand-transition>
-    <v-list v-if="status">
-      <v-list-item>
-        <v-list-item-content>
-          <v-list-item-title>
-            <v-icon class="mr-2">mdi-wifi</v-icon> Online Status:
-            <span :class="{'text-success': status.online, 'text-error': !status.online}">
-              {{ status.online ? 'Online' : 'Offline' }}
-            </span>
-          </v-list-item-title>
-          <v-list-item-subtitle>Firmware Status: {{ status.firmwareStatus }}</v-list-item-subtitle>
-          <v-list-item-subtitle>Last Connection Result: {{ status.lastConnectionResult }}</v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-    </v-list>
-  </v-expand-transition>
+  <div class="pb-2">
+  <v-card-title class="bp-0">
+    <span class="font-weight-medium pr-2">Online Status:</span>
+    <span :class="{'text-success': status.online, 'text-error': !status.online}">
+      {{ status.online ? 'Online' : 'Offline' }}
+    </span>
+  </v-card-title>
+  <v-card-subtitle>
+    <span class="font-weight-medium">Firmware Status:</span> {{ status.firmwareStatus }}
+  </v-card-subtitle>
+  <v-card-subtitle>
+    <span class="font-weight-medium">Last Connection Result:</span> {{ status.lastConnectionResult }}
+  </v-card-subtitle>
+</div>
 </template>
 
 <script setup>

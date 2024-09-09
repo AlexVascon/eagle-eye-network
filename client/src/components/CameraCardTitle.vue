@@ -1,14 +1,12 @@
 <template>
-  <div>
-  <v-card-title>
-    <v-icon color="primary" class="mr-2">mdi-camera</v-icon>
+  <div className="pb-2">
+  <v-card-title class="pb-0">
     {{ name }}
   </v-card-title>
   <v-card-subtitle>
-    <v-icon color="secondary" class="mr-2">mdi-shield-account</v-icon>
     Account ID: {{ accountId }}
   </v-card-subtitle>
-</div>
+  </div>
 </template>
 
 <script setup>

@@ -1,6 +1,6 @@
 <template>
-  <v-container class="mx-auto my-4" max-width="600">
-    <v-card>
+  <v-container class="mx-auto my-4" max-width="800">
+    <v-card class="pa-4">
       <CameraCardTitle 
         :name="cameraDetails.details.name"
         :accountId="cameraDetails.details.accountId"
@@ -23,20 +23,24 @@
 
       <v-card-text>
         <v-row>
-          <v-col cols="12" sm="6">
-            <strong>Device Type ID:</strong> {{ cameraDetails.details.deviceTypeId }}
+          <v-col cols="12" sm="6" class="mb-4">
+            <strong>Device Type ID:</strong>
+            <div>{{ cameraDetails.details.deviceTypeId }}</div>
           </v-col>
-          <v-col cols="12" sm="6">
-            <strong>MAC Address:</strong> {{ cameraDetails.details.ethMacAddress }}
+          <v-col cols="12" sm="6" class="mb-4">
+            <strong>MAC Address:</strong>
+            <div>{{ cameraDetails.details.ethMacAddress }}</div>
           </v-col>
-          <v-col cols="12" sm="6">
-            <strong>Zone ID:</strong> {{ cameraDetails.details.zoneId }}
+          <v-col cols="12" sm="6" class="mb-4">
+            <strong>Zone ID:</strong>
+            <div>{{ cameraDetails.details.zoneId }}</div>
           </v-col>
         </v-row>
       </v-card-text>
     </v-card>
   </v-container>
 </template>
+
 
 <script setup>
 import { ref, onMounted } from 'vue';

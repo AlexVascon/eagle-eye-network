@@ -13,12 +13,9 @@
     label="Password"
   ></v-text-field>
 
-  <v-card-actions class="mt-4 d-flex justify-space-between">
+  <v-card-actions class="mt-4 d-flex align-center justify-between">
     <v-btn color="primary" type="submit" :loading="loading" block>
       <v-icon left>mdi-login</v-icon> Submit
-    </v-btn>
-    <v-btn color="error" @click="handleReset" block>
-      <v-icon left>mdi-close-circle</v-icon> Clear
     </v-btn>
   </v-card-actions>
 
@@ -48,3 +45,9 @@ const handleLogin = () => {
   login(email.value, password.value, router);
 };
 </script>
+
+<style scoped>
+form {
+  width: 700px
+}
+</style>
